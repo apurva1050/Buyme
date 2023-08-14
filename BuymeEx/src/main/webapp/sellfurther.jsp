@@ -39,12 +39,11 @@ try{
 }
 
 
-
-
-
-
-
 %>
+// button create
+<form method="post" action="Home.jsp">
+    <input type="submit" value="Go to Home">
+</form>
 
 </body>
 </html>
