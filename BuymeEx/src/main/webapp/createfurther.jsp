@@ -12,16 +12,13 @@
 
 <%
 
-if(request.getParameter("newUser").equals(null) || request.getParameter("newPassword").equals(null)){
-	response.sendRedirect("createfail.jsp");
-}
 try{
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
 Statement stmt = con.createStatement();
 String str1 = request.getParameter("newUser");
 String str2 = request.getParameter("newPassword");
-String query = "select * from user where username = \"" + str1 + "\" ";
+String query = "select * from user where username = \"" + str1 + "\" and " + "password = \"" + str2 + "\"     " ;
 ResultSet rs = stmt.executeQuery(query);
 if(rs.absolute(1)){
 	response.sendRedirect("createfail.jsp");
