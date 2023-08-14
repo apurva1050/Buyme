@@ -10,13 +10,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>BuyMe:create account</title>
 	</head>
+	<body>
 	<center>
 	<h1>Login failed, account does not exist! </h1>
-	<body>
-		
-        <%
-		// add a button here to go back to the helloWorld.jsp page 
-		%>
 	
-</body></center>
+	//back button add	
+        	<form method="get" action="javascript:history.go(-1)">
+            		<input type="submit" value="Go Back">
+        	</form>
+	</center>	
+</body>
 </html>
