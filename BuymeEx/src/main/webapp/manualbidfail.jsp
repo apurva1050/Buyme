@@ -2,23 +2,13 @@
     pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>BuyMe:create account</title>
+	<title></title>
 	</head>
-	<center>
-	<h1>Account already exists! </h1>
 	<body>
-		
-		<form>
-	<input type="button" value="Go Back" onclick="history.back()">
-</form>
-		
-
-	
-</body></center>
-</html>
+	<h2>You did not meet the required increment!</h2>
+	<a href='Home.jsp'><button>Return to Homepage!</button></a>
+</body>	
+</html> 

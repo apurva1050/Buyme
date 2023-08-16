@@ -11,13 +11,11 @@
 		<title>BuyMe:create account</title>
 	</head>
 	<body>
-	<center>
+		<center>
 	<h1>Login failed, account does not exist! </h1>
-	
-	//back button add	
-        	<form method="get" action="javascript:history.go(-1)">
+        <form method="get" action="javascript:history.go(-1)">
             		<input type="submit" value="Go Back">
         	</form>
-	</center>	
+	</center>
 </body>
 </html>

@@ -9,32 +9,31 @@
 <title>login</title>
 </head>
 <body>
-
 <%
+
 try{
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
 Statement stmt = con.createStatement();
-String str1 = request.getParameter("newUser");
-String str2 = request.getParameter("newPassword");
-String query = "select * from user where username = \"" + str1 + "\"" ;
+String str1 = request.getParameter("usern");
+String str2 = request.getParameter("passn");
+String query = "select * from customer_representative where staff_user = \"" + str1 + "\" " ;
 ResultSet rs = stmt.executeQuery(query);
 if(rs.absolute(1)){
-	response.sendRedirect("createfail.jsp");
+	response.sendRedirect("custrephome.jsp");
 }else{
-	String newQuery = "insert into user(username, password) values('"+str1 + "', '"+str2+"') ";
-	Statement stmt2 = con.createStatement();
-	stmt2.executeUpdate(newQuery);
+	response.sendRedirect("loginfail.jsp");
 }
+
+
 con.close();
+
 }catch(Exception e ){
 	out.println("error");
 }
 %>
-<h1>Account created! You can log in now!</h1>
-<form>
-	<input type="button" value="Go Back" onclick="history.back()">
-</form>
+
+
 
 </body>
 </html>

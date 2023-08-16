@@ -14,21 +14,25 @@
 		<h1 style="text-align:center">Welcome to Buyme!</h1>				  
 		<br>
 		<center>
-		<form method = "post" action="login.jsp">
-		<input type="submit"  value="Log in to existing account">
+		<form method = "post" action="removebid.jsp">
+		<input type="submit"  value="Remove a bid">
+		  </form>
+		  <br>
+		   <form method = "post" action="removeauction.jsp">
+		  		<input type="submit"  value="Remove an auction">
 		  </form>
 		  <br>
 		 
-		  <form method = "post" action="create.jsp">
-		  		<input type="submit"  value="Create Account">
+		  <form method = "post" action="HelloWorld.jsp">
+		  		<input type="submit"  value="Logout">
 		  </form>
 		  <br>
-		  <form method = "post" action="administratorlogin.jsp">
-		  		<input type="submit"  value="Administrator login">
+		  <form method = "post" action="answer.jsp">
+		  		<input type="submit"  value="Answer Questions here.">
 		  </form>
 		  <br>
-		  <form method = "post" action="lastlogin.jsp">
-		  		<input type="submit"  value="Staff login">
+		  <form method = "post" action="deleteaccount.jsp">
+		  		<input type="submit"  value="Delete accounts here.">
 		  </form>
 		  </center>
 		<br>

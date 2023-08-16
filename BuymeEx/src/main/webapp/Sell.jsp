@@ -26,7 +26,7 @@
 		<form method = "post"  name = "fu" onsubmit="check()">
 		<center>
     <label for="category">Category:</label>
-    <select id="category" onchange="showSubcategories()">
+    <select id="category" name="category">
         <option value="">Select a category</option>
         <option value="Electronics">Electronics</option>
         <option value="Vehicles">Vehicles</option>

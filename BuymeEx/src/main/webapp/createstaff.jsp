@@ -15,14 +15,14 @@ try{
 ApplicationDB db = new ApplicationDB();
 Connection con = db.getConnection();
 Statement stmt = con.createStatement();
-String str1 = request.getParameter("newUser");
-String str2 = request.getParameter("newPassword");
-String query = "select * from user where username = \"" + str1 + "\"" ;
+String str1 = request.getParameter("staffuser");
+String str2 = request.getParameter("staffpassword");
+String query = "select * from customer_representative where staff_user = \"" + str1 + "\" " ;
 ResultSet rs = stmt.executeQuery(query);
 if(rs.absolute(1)){
 	response.sendRedirect("createfail.jsp");
 }else{
-	String newQuery = "insert into user(username, password) values('"+str1 + "', '"+str2+"') ";
+	String newQuery = "insert into customer_representative(staff_user, staff_password) values('"+str1+ "', '"+str2+"') ";
 	Statement stmt2 = con.createStatement();
 	stmt2.executeUpdate(newQuery);
 }
@@ -31,10 +31,9 @@ con.close();
 	out.println("error");
 }
 %>
-<h1>Account created! You can log in now!</h1>
-<form>
-	<input type="button" value="Go Back" onclick="history.back()">
-</form>
+<h1>Account created for staff! You can log in now!</h1>
+	<a href='adminhome.jsp'><button>Return to Homepage!</button></a>
+
 
 </body>
 </html>

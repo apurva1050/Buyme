@@ -32,6 +32,19 @@
 		<form method = "post" action="question.jsp">
 		<input type = "submit" value= "Have a question? Ask our customer representatives.">
 		</form>
+		<br>
+		<br>
+		<form method = "post" action="messages.jsp">
+		<input type = "submit" value= "View you alerts here.">
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<form method = "post" action="HelloWorld.jsp">
+		<input type = "submit" value= "Logout">
+		</form>
+		
 		</center>
 </body>
 </html>
