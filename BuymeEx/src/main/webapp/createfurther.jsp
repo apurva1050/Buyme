@@ -5,7 +5,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>login</title>
 </head>
 <body>
@@ -32,9 +31,7 @@ con.close();
 }
 %>
 <h1>Account created! You can log in now!</h1>
-<form>
-	<input type="button" value="Go Back" onclick="history.back()">
-</form>
+<a href='HelloWorld.jsp'><button>Return to login page!</button></a>
 
 </body>
 </html>

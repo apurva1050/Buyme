@@ -18,18 +18,25 @@
 		<input type="submit"  value="Log in to existing account">
 		  </form>
 		  <br>
-		 
+		 <br>
+		 <br>
 		  <form method = "post" action="create.jsp">
 		  		<input type="submit"  value="Create Account">
 		  </form>
+		  <br>
+		  <br>
 		  <br>
 		  <form method = "post" action="administratorlogin.jsp">
 		  		<input type="submit"  value="Administrator login">
 		  </form>
 		  <br>
+		  <br>
+		  <br>
 		  <form method = "post" action="lastlogin.jsp">
 		  		<input type="submit"  value="Staff login">
 		  </form>
+		  
+		  
 		  </center>
 		<br>
 </body>

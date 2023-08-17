@@ -22,18 +22,18 @@
 		  		<input type="submit"  value="Remove an auction">
 		  </form>
 		  <br>
-		 
+		  <form method = "post" action="answerquestion.jsp">
+		  		<input type="submit"  value="Answer Questions here.">
+		  </form>
+		  <br>
+		  <form method = "post" action="removeaccount.jsp">
+		  		<input type="submit"  value="Delete accounts here.">
+		  </form>
+		  <br>
 		  <form method = "post" action="HelloWorld.jsp">
 		  		<input type="submit"  value="Logout">
 		  </form>
 		  <br>
-		  <form method = "post" action="answer.jsp">
-		  		<input type="submit"  value="Answer Questions here.">
-		  </form>
-		  <br>
-		  <form method = "post" action="deleteaccount.jsp">
-		  		<input type="submit"  value="Delete accounts here.">
-		  </form>
 		  </center>
 		<br>
 </body>

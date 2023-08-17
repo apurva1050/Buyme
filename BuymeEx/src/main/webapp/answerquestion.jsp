@@ -4,57 +4,58 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<h1>Remove an account </h1>
-	<head>
+<head>
 	<script type="text/javascript">
 			
-			function check(){
-				if(document.here.rename.rename==""){
-					alert("Select a user to remove");
+			function take(){
+				if(document.hue.qid.value=="" || document.hue.answer.value==""){
+					alert("one or more fields is empty");
 					return false;
 				}else{
 						alert("You need to refresh the page to see the changes made.");
+						document.hue.action="answerfurther.jsp";
 						return true;
+					}
 				}
-			}
-		
-		
 </script>
 	</head>
+	
 	<body>
 	<%
 	try{
-
 		ApplicationDB db = new ApplicationDB();
 		Connection con = db.getConnection();
 		Statement stmt = con.createStatement();
-		String query = "SELECT username FROM user";
+		String query = "SELECT * FROM question";
 		ResultSet rs = stmt.executeQuery(query);
 		ResultSetMetaData rsmd = rs.getMetaData();
+		
 		int columns = rsmd.getColumnCount();
 		while(rs.next()){
 			for(int i =1; i<=columns;i++){
 				String columnValue = rs.getString(i);				
-		        out.print( rsmd.getColumnName(i)+ ":  " + columnValue + "<br/>");
+		        out.print( "<strong> " + rsmd.getColumnName(i)+ "<strong>" + ":  " + columnValue + "<br/>");
 			}
 			out.println("<br/>");
 		}
-		String str1 = request.getParameter("rename");
-		String nuquery = "delete from user where username in (?)";
-		PreparedStatement ps = con.prepareStatement(nuquery);
-		ps.setString(1, str1);
-		ps.executeUpdate();
-		
 		}catch(Exception e){
 			out.println("error");
 		}
 	%>
 
 <center>
-	<form name = "here" method="post" onsubmit="check()">
-			What user would you like to remove : <input name = "rename" type = "text" placeholder="type in the user name">
-			<input type="submit" value="Remove">
+
+	<form name = "hue" method="post" onsubmit="take()">
+			What question would you like to answer? : <input name = "qid" type = "text" placeholder= "question id goes here" >
+			<textarea name="answer" rows="6" columns = "10">Type your answer here</textarea>
+			<input type="submit" value="Post!">
 		</form>
+		<br>
+		
+		
+		
+		
+		
 		<form method="post" action="custrephome.jsp">
 			<input type="submit" value="Go to home page.">
 		</form>

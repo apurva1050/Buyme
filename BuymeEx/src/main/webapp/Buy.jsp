@@ -24,6 +24,10 @@
 		<form method = "post" action="categorysearch.jsp">
 		<input type="submit"  value="Search by category ">
 		</form>
+   		<br>
+   		<form method = "post" action="history.jsp">
+		<input type="submit"  value="View bidding history ">
+		</form>
    				
    </center>
 </body>	

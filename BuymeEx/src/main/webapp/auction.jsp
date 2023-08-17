@@ -30,7 +30,7 @@ while(rs.next()){
 	out.println("<br/>");
 	
 }
-
+con.close();
 }catch(Exception e){
 	out.println("error");
 }

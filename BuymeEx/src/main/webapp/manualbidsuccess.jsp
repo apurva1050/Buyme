@@ -42,7 +42,7 @@
 		 str2 = rs.getString(1);
 	}
 	if(str2.equals(str1)){
-		out.println("You cannot bid on your own item.");
+		out.println("<strong>" + "You cannot bid on your own item." + "<strong>");
 	}else{
 		String newQuery = "Select current_price, increments from bidonitems where itemNumber = \"" + itemID + "\" ";
 		Statement stmt2 = con.createStatement();
@@ -65,21 +65,35 @@
 			ps.setDouble(1, a);
 			ps.setInt(2, Integer.parseInt(itemID));
 			ps.executeUpdate();
+			
 			String updateagain = "update bidonitems set bidder = ? where itemNumber = ?";
 			PreparedStatement ps2 = con.prepareStatement(updateagain);
 			ps2.setString(1, str1);
 			ps2.setInt(2, Integer.parseInt(itemID));
 			ps2.executeUpdate();
+			out.println(str1 + "just placed a bid on " + itemID);
+			
+			String newquery = "Insert into allbids(item_id, username, price) values('" + itemID + "', '" + str1 + "', '" + a + "')";
+			Statement stmt4 = con.createStatement();
+			stmt4.executeUpdate(newquery);
+			
+			String message = "A bid was placed on item  " +itemID+"";
+			Statement stmt6 = con.createStatement();
+			String lastQuery = "Insert into messages(item_id,user_id, message, bid) values('"+itemID+"', '"+str1+"', '"+message+"', '"+ a+ "')";
+			stmt6.executeUpdate(lastQuery);
 			response.sendRedirect("manualbidfurther.jsp");
+			
 		}else{
-			out.println("you did not meet the increment.");
 			response.sendRedirect("manualbidfail.jsp");
 		}
 	}
 	con.close();
 	}catch(Exception e){
-		out.println("error");
+		
 	}
 	%>
+		<a href='Home.jsp'><button>Return to Homepage!</button></a>
+	
+	
 </body>	
 </html> 

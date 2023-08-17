@@ -65,6 +65,9 @@
 			What auction would you like to remove: <input name = "reitem" type = "text" placeholder="type in the item nummber">
 			<input type="submit" value="Remove">
 		</form>
+		<form method="post" action="custrephome.jsp">
+			<input type="submit" value="Go to home page.">
+		</form>
 	</center>
 
 </body>	

@@ -14,9 +14,7 @@
 	<h1>Account already exists! </h1>
 	<body>
 		
-		<form>
-	<input type="button" value="Go Back" onclick="history.back()">
-</form>
+		<a href='HelloWorld.jsp.jsp'><button>Go back!</button></a>
 		
 
 	

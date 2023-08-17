@@ -13,7 +13,7 @@
 	<body>
 		<center>
 	<h1>Login failed, account does not exist! </h1>
-        <form method="get" action="javascript:history.go(-1)">
+        <form method="get" action="HelloWorld.jsp">
             		<input type="submit" value="Go Back">
         	</form>
 	</center>

@@ -19,6 +19,10 @@
 		  </form>
 		  <br>
 		 
+		 <form method = "post" action= "reports.jsp" >
+		  		<input type="submit"  value="View Reports">
+		  </form>
+		  <br>
 		  <form method = "post" action="HelloWorld.jsp">
 		  		<input type="submit"  value="Logout">
 		  </form>
